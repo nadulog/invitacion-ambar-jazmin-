@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#ead2c2" />
+    <meta
+      name="description"
+      content="Invitación a los XV años de Ámbar Jazmín, el 14 de noviembre de 2026."
+    />
+    <title>Mis XV · Ámbar Jazmín</title>
+    <link rel="preload" as="image" href="assets/portada.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="invitation" aria-label="Invitación a los XV años de Ámbar Jazmín">
+      <section class="panel panel--cover" aria-labelledby="cover-title">
+        <h1 id="cover-title" class="sr-only">Mis XV, Ámbar Jazmín</h1>
+        <img
+          src="assets/portada.png"
+          alt="Mis XV de Ámbar Jazmín, entre rosas, jazmines y cintas color rosa"
+          width="940"
+          height="1672"
+          fetchpriority="high"
+        />
+      </section>
+
+      <section class="panel panel--guests" aria-labelledby="guests-title">
+        <h2 id="guests-title" class="sr-only">Invitación personalizada</h2>
+        <img
+          src="assets/invitados.png"
+          alt="Esta invitación fue creada especialmente para vos"
+          width="941"
+          height="1672"
+          loading="lazy"
+        />
+        <p id="guestName" class="guest-name">Invitada/o especial</p>
+        <p class="guest-places"><span id="guestPlaces">1</span></p>
+      </section>
+
+      <section class="panel panel--countdown" aria-labelledby="countdown-title">
+        <h2 id="countdown-title" class="sr-only">Cuenta regresiva</h2>
+        <img
+          src="assets/cuenta-regresiva.png"
+          alt="Cuenta regresiva para los XV años de Ámbar Jazmín"
+          width="941"
+          height="1672"
+          loading="lazy"
+        />
+        <div class="countdown-butterflies" id="countdownButterflies" aria-hidden="true"></div>
+        <div class="countdown" role="timer" aria-live="off" aria-label="Tiempo restante para la fiesta">
+          <span id="days">00</span>
+          <span id="hours">00</span>
+          <span id="minutes">00</span>
+          <span id="seconds">00</span>
+        </div>
+      </section>
+
+      <section class="panel panel--date" aria-labelledby="date-title">
+        <h2 id="date-title" class="sr-only">Fecha y hora</h2>
+        <img
+          src="assets/fecha-hora.png"
+          alt="14 de noviembre a las 21:20 horas"
+          width="941"
+          height="1672"
+          loading="lazy"
+        />
+        <button id="calendarButton" class="hotspot hotspot--calendar" type="button">
+          <span class="sr-only">Agregar el evento al calendario</span>
+        </button>
+      </section>
+
+      <section class="panel panel--map" aria-labelledby="map-title">
+        <h2 id="map-title" class="sr-only">Cómo llegar</h2>
+        <img
+          src="assets/como-llegar.png"
+          alt="Essence Palace Eventos, Mendoza 1215, San Justo"
+          width="941"
+          height="1672"
+          loading="lazy"
+        />
+        <button
+          id="openMapModal"
+          class="hotspot hotspot--map"
+          type="button"
+        >
+          <span class="sr-only">Ver opciones para llegar</span>
+        </button>
+      </section>
+
+      <section class="panel panel--dress-code" aria-labelledby="dress-code-title">
+        <h2 id="dress-code-title" class="sr-only">Código de vestimenta</h2>
+        <img
+          src="assets/dress-code.png"
+          alt="Dress code elegante sport. Evitar colores claros"
+          width="941"
+          height="1672"
+          loading="lazy"
+        />
+      </section>
+
+      <section class="panel panel--bloomkeep" aria-labelledby="bloomkeep-title">
+        <h2 id="bloomkeep-title" class="sr-only">BloomKeep</h2>
+        <img
+          src="assets/bloomkeep.png"
+          alt="BloomKeep: guardemos juntos los recuerdos de esta noche"
+          width="941"
+          height="1672"
+          loading="lazy"
+        />
+        <a
+          class="hotspot hotspot--bloomkeep"
+          href="https://app.bloomkeep.site/ambar-jazmin-15"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <span class="sr-only">Subir fotos a BloomKeep</span>
+        </a>
+      </section>
+
+      <section class="panel panel--music" aria-labelledby="music-title">
+        <h2 id="music-title" class="sr-only">Música</h2>
+        <img
+          src="assets/musica.png"
+          alt="Sección para agregar música a la celebración"
+          width="941"
+          height="1672"
+          loading="lazy"
+        />
+        <div class="vinyl-motion" aria-hidden="true"></div>
+        <div class="vinyl-label" aria-hidden="true">
+          <img src="assets/musica.png" alt="" />
+        </div>
+        <a
+          class="hotspot hotspot--music"
+          href="https://open.spotify.com/playlist/6wTMVTInRxx6aN4J2qUsjz?si=ij3EDCxkSAO17LOnrRW6RQ&amp;utm_source=whatsapp&amp;pi=SaQBsu0BR3CcG&amp;pt=252c763d94f905960e6158af54629f73"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <span class="sr-only">Agregar música en Spotify</span>
+        </a>
+      </section>
+
+      <section class="panel panel--gifts" aria-labelledby="gifts-title">
+        <h2 id="gifts-title" class="sr-only">Regalos</h2>
+        <img
+          src="assets/regalos.png"
+          alt="Tu presencia es el mejor regalo. Información para obsequios"
+          width="941"
+          height="1672"
+          loading="lazy"
+        />
+        <button id="openGiftsModal" class="hotspot hotspot--gifts" type="button">
+          <span class="sr-only">Ver datos para regalo</span>
+        </button>
+      </section>
+
+      <section class="panel panel--confirmation" aria-labelledby="confirmation-title">
+        <h2 id="confirmation-title" class="sr-only">ConfirmaciÃ³n de asistencia</h2>
+        <img
+          src="assets/confirmacion.png"
+          alt="ConfirmÃ¡ tu asistencia a los XV de Ãmbar JazmÃ­n"
+          width="941"
+          height="1672"
+          loading="lazy"
+        />
+      </section>
+
+      <footer class="panel panel--footer" aria-label="BloomDate y redes sociales">
+        <img
+          src="assets/footer-bloomdate.png"
+          alt="Hecho con amor por BloomDate. WhatsApp, Instagram y sitio web"
+          width="2172"
+          height="724"
+          loading="lazy"
+        />
+        <a
+          class="footer-link footer-link--whatsapp"
+          href="https://wa.me/541140436324"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Contactar a BloomDate por WhatsApp"
+        ></a>
+        <a
+          class="footer-link footer-link--instagram"
+          href="https://www.instagram.com/bloomdate.invitaciones/"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Ver BloomDate Invitaciones en Instagram"
+        ></a>
+        <a
+          class="footer-link footer-link--website"
+          href="https://bloomdate-site.netlify.app/"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Visitar el sitio web de BloomDate"
+        ></a>
+      </footer>
+    </main>
+
+    <dialog id="mapModal" class="image-modal" aria-label="Opciones para llegar a Essence Palace Eventos">
+      <div class="modal-art">
+        <img
+          src="assets/modal-ubicacion.png"
+          alt="Cómo llegar a Essence Palace Eventos, Mendoza 1215, San Justo"
+          width="1122"
+          height="1402"
+        />
+        <a
+          class="modal-action modal-action--maps"
+          href="https://www.google.com/maps/search/?api=1&amp;query=Essence%20Palace%20Eventos%2C%20Mendoza%201215%2C%20San%20Justo%2C%20Buenos%20Aires"
+          target="_blank"
+          rel="noreferrer"
+        ><span class="sr-only">Abrir en Google Maps</span></a>
+        <a
+          class="modal-action modal-action--waze"
+          href="https://www.waze.com/ul?q=Essence%20Palace%20Eventos%2C%20Mendoza%201215%2C%20San%20Justo%2C%20Buenos%20Aires&amp;navigate=yes"
+          target="_blank"
+          rel="noreferrer"
+        ><span class="sr-only">Abrir en Waze</span></a>
+        <button
+          class="modal-action modal-action--copy-address"
+          type="button"
+          data-copy="Essence Palace Eventos, Mendoza 1215, San Justo, Buenos Aires"
+          data-copy-message="Dirección copiada"
+        ><span class="sr-only">Copiar dirección</span></button>
+        <button class="modal-action modal-action--close-map" type="button" data-close-modal>
+          <span class="sr-only">Cerrar</span>
+        </button>
+        <p class="modal-toast" aria-live="polite"></p>
+      </div>
+    </dialog>
+
+    <dialog id="giftsModal" class="image-modal" aria-label="Datos para regalo">
+      <div class="modal-art">
+        <img
+          src="assets/modal-regalos.png"
+          alt="Datos para regalo: alias 32ambarr, titular Martinez Fuduli Ambar Jazmin, entidad Mercado Pago"
+          width="1122"
+          height="1402"
+        />
+        <button
+          class="modal-action modal-action--copy-alias"
+          type="button"
+          data-copy="32ambarr"
+          data-copy-message="Alias copiado"
+        ><span class="sr-only">Copiar alias 32ambarr</span></button>
+        <button class="modal-action modal-action--close-gifts" type="button" data-close-modal>
+          <span class="sr-only">Cerrar</span>
+        </button>
+        <p class="modal-toast" aria-live="polite"></p>
+      </div>
+    </dialog>
+
+    <script src="script.js"></script>
+  </body>
+</html>
