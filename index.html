@@ -9,11 +9,32 @@
       content="Invitación a los XV años de Ámbar Jazmín, el 14 de noviembre de 2026."
     />
     <title>Mis XV · Ámbar Jazmín</title>
+    <link rel="preload" as="image" href="assets/intro-ambar.png" fetchpriority="high" />
     <link rel="preload" as="image" href="assets/portada.png" />
+    <link rel="preload" as="audio" href="assets/musica-emilia.mp3" type="audio/mpeg" />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
-    <main class="invitation" aria-label="Invitación a los XV años de Ámbar Jazmín">
+  <body class="intro-is-open">
+    <div class="invitation-intro" role="dialog" aria-modal="true" aria-label="Bienvenida a los XV de Ámbar Jazmín">
+      <div class="invitation-intro__stage">
+        <img
+          class="invitation-intro__image"
+          src="assets/intro-ambar.png"
+          alt="Mis XV de Ámbar Jazmín. Elegí cómo querés ingresar"
+          width="941"
+          height="1672"
+        />
+        <button id="introWithMusic" class="intro-action intro-action--music" type="button">
+          <span class="sr-only">Entrar con música</span>
+        </button>
+        <button id="introWithoutMusic" class="intro-action intro-action--silent" type="button">
+          <span class="sr-only">Entrar sin música</span>
+        </button>
+      </div>
+      <div class="invitation-intro__flock" aria-hidden="true"></div>
+    </div>
+
+    <main id="invitationMain" class="invitation" tabindex="-1" aria-label="Invitación a los XV años de Ámbar Jazmín">
       <section class="panel panel--cover" aria-labelledby="cover-title">
         <h1 id="cover-title" class="sr-only">Mis XV, Ámbar Jazmín</h1>
         <img
@@ -259,6 +280,18 @@
         <p class="modal-toast" aria-live="polite"></p>
       </div>
     </dialog>
+
+    <button
+      id="audioToggle"
+      class="audio-toggle"
+      type="button"
+      aria-label="Reproducir música"
+      aria-pressed="false"
+    >
+      <span class="audio-toggle__note" aria-hidden="true">♫</span>
+      <span class="audio-toggle__state" aria-hidden="true"></span>
+    </button>
+    <audio id="invitationAudio" src="assets/musica-emilia.mp3" loop preload="metadata"></audio>
 
     <script src="script.js"></script>
     <script src="assets/invitation-personalization.js"></script>
