@@ -190,18 +190,12 @@ a {
 }
 
 .guest-places {
-  top: 64.55%;
+  top: 47.5%;
   left: 16%;
   width: 68%;
-  font-size: clamp(1rem, 4.1vw, 1.7rem);
+  font-size: clamp(1.05rem, 4.25vw, 1.75rem);
   line-height: 1.15;
   letter-spacing: 0.035em;
-}
-
-.guest-places:not(:empty) {
-  padding: 0.35em 0;
-  background: rgba(248, 231, 222, 0.97);
-  box-shadow: 0 0 12px 12px rgba(248, 231, 222, 0.97);
 }
 
 .countdown {
