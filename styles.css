@@ -190,11 +190,18 @@ a {
 }
 
 .guest-places {
-  top: 65.95%;
-  left: 35.4%;
-  width: 14%;
-  font-size: clamp(1.4rem, 5.6vw, 2.3rem);
-  line-height: 1;
+  top: 64.55%;
+  left: 16%;
+  width: 68%;
+  font-size: clamp(1rem, 4.1vw, 1.7rem);
+  line-height: 1.15;
+  letter-spacing: 0.035em;
+}
+
+.guest-places:not(:empty) {
+  padding: 0.35em 0;
+  background: rgba(248, 231, 222, 0.97);
+  box-shadow: 0 0 12px 12px rgba(248, 231, 222, 0.97);
 }
 
 .countdown {
@@ -360,6 +367,17 @@ a {
   left: 25%;
   width: 50%;
   height: 6.6%;
+}
+
+.hotspot--confirmation {
+  top: 57.45%;
+  left: 20.7%;
+  width: 58.9%;
+  height: 6.1%;
+}
+
+.hotspot--confirmation[aria-disabled="true"] {
+  pointer-events: none;
 }
 
 .image-modal {

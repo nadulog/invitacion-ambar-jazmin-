@@ -34,8 +34,8 @@
           height="1672"
           loading="lazy"
         />
-        <p id="guestName" class="guest-name">Invitada/o especial</p>
-        <p class="guest-places"><span id="guestPlaces">1</span></p>
+        <p id="nombres-invitados" class="guest-name"></p>
+        <p id="cantidad-lugares" class="guest-places"></p>
       </section>
 
       <section class="panel panel--countdown" aria-labelledby="countdown-title">
@@ -164,6 +164,14 @@
           height="1672"
           loading="lazy"
         />
+        <a
+          id="boton-confirmar"
+          class="hotspot hotspot--confirmation"
+          aria-label="Confirmar asistencia"
+          aria-disabled="true"
+        >
+          <span class="sr-only">Confirmar asistencia</span>
+        </a>
       </section>
 
       <footer class="panel panel--footer" aria-label="BloomDate y redes sociales">
@@ -253,5 +261,6 @@
     </dialog>
 
     <script src="script.js"></script>
+    <script src="assets/invitation-personalization.js"></script>
   </body>
 </html>

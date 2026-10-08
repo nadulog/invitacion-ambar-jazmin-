@@ -62,20 +62,6 @@ function updateCountdown() {
   countdownFields.seconds.textContent = String(totalSeconds % 60).padStart(2, "0");
 }
 
-function readGuestDetails() {
-  const params = new URLSearchParams(window.location.search);
-  const name = params.get("nombre")?.trim();
-  const places = Number.parseInt(params.get("lugares"), 10);
-
-  if (name) {
-    document.querySelector("#guestName").textContent = name.slice(0, 70);
-  }
-
-  if (Number.isInteger(places) && places > 0 && places < 100) {
-    document.querySelector("#guestPlaces").textContent = String(places);
-  }
-}
-
 function toIcsDate(date) {
   return date.toISOString().replace(/[-:]/g, "").replace(/\.\d{3}/, "");
 }
@@ -107,7 +93,6 @@ function downloadCalendarEvent() {
   URL.revokeObjectURL(link.href);
 }
 
-readGuestDetails();
 updateCountdown();
 window.setInterval(updateCountdown, 1000);
 document.querySelector("#calendarButton").addEventListener("click", downloadCalendarEvent);
